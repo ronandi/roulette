@@ -6,8 +6,9 @@ class Game
   property :winner, Integer
   property :current_order, Integer
   property :status, String, :default => "pregame"
+  property :fatal_order, Integer
 
   has n, :users
   has n, :bets
-  has 1, :player_order
+  has n, :player_order
 end

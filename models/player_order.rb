@@ -1,8 +1,8 @@
 class PlayerOrder
   include DataMapper::Resource
 
-  property :order_num, Serial
+  property :order_num, Integer
 
-  has n, :users
+  has 1, :user
   belongs_to :game
 end
